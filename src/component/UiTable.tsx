@@ -41,7 +41,7 @@ function UiTable({ tableData, columnsSchema }: UiTableProps) {
 
   return (
     <div className="flex flex-col w-full gap-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 w-full">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 w-1/2">
         <div className="relative w-full sm:w-1/2">
           <input
             type="text"
@@ -61,7 +61,7 @@ function UiTable({ tableData, columnsSchema }: UiTableProps) {
         </div>
       </div>
 
-      <div className="border border-gray-300 rounded overflow-x-auto">
+      <div className="border border-gray-300 rounded overflow-x-auto overflow-y-auto max-h-[calc(100vh-300px)]">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-100 sticky top-0">
             {table.getHeaderGroups().map((headerGroup) => (
